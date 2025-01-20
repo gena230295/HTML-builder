@@ -10,28 +10,28 @@ fs.mkdir(textPathCopy, notError, (error) => {
   }
 });
 
-fs.readdir(textPathCopy, (err, allNewFolder) => {
-  if (err) {
-    console.log(err);
+fs.readdir(textPathCopy, (error, allNewFolder) => {
+  if (error) {
+    console.log(error);
   } else {
     allNewFolder.forEach((el) => {
-      fs.unlink(`${textPathCopy}/${el}`, (err) => {
-        if (err) {
-          console.log(err);
+      fs.unlink(`${textPathCopy}/${el}`, (error) => {
+        if (error) {
+          console.log(error);
         }
       });
     });
   }
 });
 
-fs.readdir(textPath, (err, allFolder) => {
-  if (err) {
-    console.log(err);
+fs.readdir(textPath, (error, allFolder) => {
+  if (error) {
+    console.log(error);
   } else {
     allFolder.forEach((el) => {
-      fs.copyFile(`${textPath}/${el}`, `${textPathCopy}/${el}`, (err) => {
-        if (err) {
-          console.log(err);
+      fs.copyFile(`${textPath}/${el}`, `${textPathCopy}/${el}`, (error) => {
+        if (error) {
+          console.log(error);
         }
       });
     });

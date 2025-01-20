@@ -10,3 +10,5 @@ needFile.on('data', (readText) => {
   }
   console.log(arr.join(''));
 });
+
+// node 01-read-file
